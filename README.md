@@ -1,3 +1,7 @@
+Доброго всем
+
+¡ ¡ ¡ ALL GLORY TO GLORIA ! ! !
+
 # JSONP
 
 JSONP cross-domain ajax and sync calls.
