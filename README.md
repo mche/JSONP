@@ -25,4 +25,4 @@ Param synopsis
 Notes
 -----
 
-You **not need** to add callback query param to URL yourself.
+You **do not need** to add callback query param to URL yourself.
