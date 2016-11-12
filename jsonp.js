@@ -90,7 +90,7 @@ var JSONP = (function(){
     sender.script.onreadystatechange = function() {
       if (/^(complete|loaded)$/.test(this.readyState)) {
         this.onreadystatechange = null;
-        window.setTimeout(sender.checker, 0);
+        if (sender !== undefined && sender.checker) window.setTimeout(sender.checker, 0);
       }
     }
     
