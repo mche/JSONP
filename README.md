@@ -24,4 +24,4 @@ Param synopsis
 Notes
 -----
 
-You **not need** to add callback name to URL yourself.
+You **not need** to add callback query param to URL yourself.
