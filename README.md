@@ -30,3 +30,32 @@ Notes
 -----
 
 You **do not need** to add callback query param to URL yourself.
+
+Пример
+------
+
+      JSONP.send(
+        // About JsFiddle API: http://doc.jsfiddle.net/api/fiddles.html
+        'https://jsfiddle.net/api/user/zalun/demo/list.json?&sort=framework&start=5&limit=15',
+        {debug: true},
+        null,
+        function (response) {
+          if (response.status !== 'ok') {
+            return;
+          }
+          var output = document.querySelector('body');
+          output.innerHTML = '<ul JsFiddle-API>' + response.list.map(function (rec) {
+            return [
+              '<li><a href="$url$version">$title</a>',
+              '<span>($framework)</span>',
+              '<span>rev-$version</span>',
+              '<span>$created</span>',
+              '<p>$description</p></li>'
+            ].join(' ')
+            .replace(/\$(\w+)/g, function (_, name) {
+              return rec[name];
+            })
+          }).join('\n') + '</ul>';
+
+        }
+      );
