@@ -5,7 +5,7 @@ JSONP cross-domain ajax and sync calls.
 Usage
 -----
 
-      JSONP.send(url, options, onSuccess, onError, onTimeout);
+      JSONP.send(url, options, onSent, onSuccess, onError, onTimeout);
       
 Param synopsis
 -------
@@ -14,11 +14,12 @@ Param synopsis
       options - plain config object:
         async: true|false (true default)
         timeout: numeric seconds (15 s default)
+        onSent: function (url) {...} (call on sent request)
         onSuccess: function (data, url) {...} (call on success)
         onError: function (url) {...} (call on errors)
         onTimeout: function (url) {...} (call on timeout)
         debug: boolean (false default)
-      onSuccess, onError, onTimeout - same thing above, hight prio
+      onSent, onSuccess, onError, onTimeout - same thing above, hight prio
 
 
 Notes
